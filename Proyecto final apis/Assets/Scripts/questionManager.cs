@@ -3,6 +3,10 @@ using System.Collections;
 
 public class questionManager : MonoBehaviour {
 
+	int id;
+
+	string pregunta;
+
 	// Use this for initialization
 	void Start () {
 	
