@@ -47,8 +47,10 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\LevelNumManager.cs" />
      <Compile Include="Assets\Scripts\answerManager.cs" />
+     <Compile Include="Assets\Scripts\framerateCheck.cs" />
      <Compile Include="Assets\Scripts\mainMenuManager.cs" />
      <Compile Include="Assets\Scripts\questionManager.cs" />
+     <Compile Include="Assets\Scripts\starterManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

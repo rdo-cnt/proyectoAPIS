@@ -32,4 +32,6 @@ public class mainMenuManager : MonoBehaviour {
 		SceneManager.LoadScene(easyScene);
 		PlayerPrefs.SetInt ("Level", PlayerPrefs.GetInt ("Level") + 1);
 	}
+
+
 }
