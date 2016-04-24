@@ -47,6 +47,8 @@
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\LevelNumManager.cs" />
+     <Compile Include="Assets\Scripts\LockLvl2Manager.cs" />
+     <Compile Include="Assets\Scripts\LockLvl3Manager.cs" />
      <Compile Include="Assets\Scripts\answerManager.cs" />
      <Compile Include="Assets\Scripts\framerateCheck.cs" />
      <Compile Include="Assets\Scripts\mainMenuManager.cs" />

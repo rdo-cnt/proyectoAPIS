@@ -14,12 +14,12 @@ public class mainMenuManager : MonoBehaviour {
 	string Menu;
 	int level = 0;
 	int counter = 0;
-
+	int maxcounter = 75;
 
 
 	// Use this for initialization
 	void Start () {
-		int counter = 0;
+		counter = 0;
 		easyScene = "EasyGame";
 		Menu = "Menu";
 		FirstSceneNum1 = "FirstSceneNum1";
@@ -32,32 +32,31 @@ public class mainMenuManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (90 > counter) {
+		if (maxcounter > counter) {
 			counter++;
 		}
 	}
 
 	public void Easy(){
-		if (counter >= 90) {
+		if (counter >= maxcounter) {
 			SceneManager.LoadScene (easyScene);
-			PlayerPrefs.SetInt ("Level", PlayerPrefs.GetInt ("Level") + 1);
 		}
 	}
 
 	public void IntroCutscene1(){
-		if (counter >= 90) {
+		if (counter >= maxcounter) {
 			SceneManager.LoadScene (FirstSceneNum1);
 		}
 	}
 
 	public void IntroCutscene2(){
-		if (counter >= 90) {
+		if (counter >= maxcounter) {
 			SceneManager.LoadScene (FirstSceneNum2);
 		}
 	}
 
 	public void IntroMenu(){
-		if (counter >= 90) {
+		if (counter >= maxcounter) {
 			SceneManager.LoadScene (Menu);
 		}
 	}
