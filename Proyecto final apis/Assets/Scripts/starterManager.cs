@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;	
 
 public class starterManager : MonoBehaviour {
 
@@ -7,8 +8,9 @@ public class starterManager : MonoBehaviour {
 	void Start () {
 		if (PlayerPrefs.GetInt ("First") < 1) {
 			PlayerPrefs.SetInt ("First", 1);
+			SceneManager.LoadScene ("FirstSceneHalt");
 		} else {
-
+			SceneManager.LoadScene ("Menu");
 		}
 	}
 	
