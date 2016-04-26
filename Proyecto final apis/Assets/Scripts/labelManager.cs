@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class labelManager : MonoBehaviour {
 
-	public GameObject LevelManager;
+	public Level1Manager LevelManager;
 	public Text myText;
 	public int myID;
 
@@ -16,5 +16,9 @@ public class labelManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	public void checkCorrect(){
+		LevelManager.checkCorrect (myID);
 	}
 }
