@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\LockLvl3Manager.cs" />
      <Compile Include="Assets\Scripts\framerateCheck.cs" />
      <Compile Include="Assets\Scripts\labelManager.cs" />
+     <Compile Include="Assets\Scripts\labelManager3.cs" />
      <Compile Include="Assets\Scripts\mainMenuManager.cs" />
      <Compile Include="Assets\Scripts\pregunta1Manager.cs" />
      <Compile Include="Assets\Scripts\starterManager.cs" />

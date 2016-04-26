@@ -24,13 +24,14 @@ public class Level1Manager : MonoBehaviour {
 		
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (conta == 0) {
 			Repartir ();
 			conta++;
-		}
+		}	
+
 		HP.HP.text = playerHealth.ToString();
 
 		//primero checar vida
@@ -40,14 +41,11 @@ public class Level1Manager : MonoBehaviour {
 
 		if (enemyHealth == 0) {
 			SceneManager.LoadScene ("EasyGame");
-			PlayerPrefs.SetInt ("Lvl2", 1);
+			PlayerPrefs.SetInt ("Lvl3", 1);
 		}
-
-
 	}
 
 	public void Repartir(){
-
 		randomNum = Random.Range (0, 4);
 		randomNumPregunta = Random.Range (0, 35);
 		preguntaText.pregunta.text = preguntas [randomNumPregunta];
@@ -88,6 +86,5 @@ public class Level1Manager : MonoBehaviour {
 			playerHealth--;
 		}
 	}
-
 
 }

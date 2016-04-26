@@ -1,12 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+
 
 public class Level3Manager : MonoBehaviour {
 
 
-	public labelManager[] labels;
+	public labelManager3[] labels;
 	public int playerHealth;
 	public int enemyHealth;
+
+	public pregunta1Manager preguntaText;
+	public HealthManager HP;
+
 	int conta = 0;
 	public int randomNum;
 	public int randomNumPregunta;
@@ -18,8 +24,7 @@ public class Level3Manager : MonoBehaviour {
 	public string[] respuestaIncorrectas3 = new string[83] {"Ki", "Rub", "Et","Yr", "Cir", "Nio","Ml", "Tec", "Rt","Ri", "Pl", "P","C", "I", "St","Am", "Tr", "Y","Xo", "C", "Bo","Lt", "Co", "P","Nm", "Pt", "So","Eo", "Go", "To","Dp", "Hi", "Eo","To", "Yr", "Lc", "Ho", "To","Wf", "Ri", "O","Iri", "Pn", "Ar","Ho", "To", "Pm","Bt", "Pi", "Ao","Ro", "Fo", "Ro","An", "Ti", "Pt","Uo", "No", "Po","Ac", "Co", "Bl","Cn", "Et", "Fo","Mv", "Ne", "Ln","Rd", "Do", "So", "Bi", "Ho","Mn", "Do", "Rn","Ci", "Uo", "Fv","Ut", "Lm", "Up","Uut"};
 
 	void Start () {
-
-
+		
 	}
 
 	// Update is called once per frame
@@ -28,11 +33,24 @@ public class Level3Manager : MonoBehaviour {
 			Repartir ();
 			conta++;
 		}
+
+		HP.HP.text = playerHealth.ToString();
+
+		//primero checar vida
+		if (playerHealth == 0) {
+			SceneManager.LoadScene ("EasyGame");
+		}
+
+		if (enemyHealth == 0) {
+			SceneManager.LoadScene ("EasyGame");
+			PlayerPrefs.SetInt ("Lvl2", 1);
+		}
 	}
 
 	public void Repartir(){
 		randomNum = Random.Range (0, 4);
 		randomNumPregunta = Random.Range (0, 35);
+		preguntaText.pregunta.text = preguntas [randomNumPregunta];
 
 
 		labels[randomNum].myID = randomNumPregunta;
@@ -64,7 +82,10 @@ public class Level3Manager : MonoBehaviour {
 
 	public void checkCorrect(int id){
 		if (randomNumPregunta == id) {
+			enemyHealth--;
 			Repartir ();
+		} else {
+			playerHealth--;
 		}
 	}
 
