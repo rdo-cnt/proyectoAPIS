@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class Level1Manager : MonoBehaviour {
 
 	public labelManager[] labels;
 	public int playerHealth;
 	public int enemyHealth;
+
+	public pregunta1Manager preguntaText;
+	public HealthManager HP;
+
 	int conta = 0;
 	public int randomNum;
 	public int randomNumPregunta;
@@ -26,11 +31,26 @@ public class Level1Manager : MonoBehaviour {
 			Repartir ();
 			conta++;
 		}
+		HP.HP.text = playerHealth.ToString();
+
+		//primero checar vida
+		if (playerHealth == 0) {
+			SceneManager.LoadScene ("EasyGame");
+		}
+
+		if (enemyHealth == 0) {
+			SceneManager.LoadScene ("EasyGame");
+			PlayerPrefs.SetInt ("Lvl2", 1);
+		}
+
+
 	}
 
 	public void Repartir(){
+
 		randomNum = Random.Range (0, 4);
 		randomNumPregunta = Random.Range (0, 35);
+		preguntaText.pregunta.text = preguntas [randomNumPregunta];
 
 
 		labels[randomNum].myID = randomNumPregunta;
@@ -62,8 +82,12 @@ public class Level1Manager : MonoBehaviour {
 
 	public void checkCorrect(int id){
 		if (randomNumPregunta == id) {
+			enemyHealth--;
 			Repartir ();
+		} else {
+			playerHealth--;
 		}
 	}
+
 
 }
