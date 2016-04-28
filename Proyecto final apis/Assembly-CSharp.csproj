@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\CameraController.cs" />
      <Compile Include="Assets\Scripts\HealthManager.cs" />
      <Compile Include="Assets\Scripts\Level1Manager.cs" />
+     <Compile Include="Assets\Scripts\Level2Manager.cs" />
      <Compile Include="Assets\Scripts\Level3Manager.cs" />
      <Compile Include="Assets\Scripts\LevelNumManager.cs" />
      <Compile Include="Assets\Scripts\LockLvl2Manager.cs" />
@@ -57,6 +58,7 @@
      <Compile Include="Assets\Scripts\labelManager3.cs" />
      <Compile Include="Assets\Scripts\mainMenuManager.cs" />
      <Compile Include="Assets\Scripts\pregunta1Manager.cs" />
+     <Compile Include="Assets\Scripts\pregunta2Manager.cs" />
      <Compile Include="Assets\Scripts\starterManager.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
