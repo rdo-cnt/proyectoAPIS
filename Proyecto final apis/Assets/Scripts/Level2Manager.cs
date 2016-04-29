@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class Level2Manager : MonoBehaviour {
 
-	public labelManager[] labels;
+	public labelManager2[] labels;
 	public int playerHealth;
 	public int enemyHealth;
 
@@ -14,11 +14,12 @@ public class Level2Manager : MonoBehaviour {
 	int conta = 0;
 	public int randomNum;
 	public int randomNumPregunta;
-	public string[] respuestasCorrectas = new string[35] {"H", "He", "Li","Be", "B", "C","N", "O", "F","Ne", "Na", "Mg","Al", "Si", "P","S", "Cl", "Ar","K", "Ca", "Sc","Ti", "V", "Cr","Mn", "Fe", "Co","Ni", "Cu", "Zn","Ga", "Ge", "As","Se", "Br"};
+	public string[] respuestasCorrectas = new string[28] {"Metano", "Etano", "Propano","Butano", "Pentano", "Hexano","Heptano", "Octano", "Nonano","Decano", "Eteno", "Propeno","Buteno", "Penteno", "Hexeno","Hepteno", "Octeno", "Noneno","Deceno", "Etino", "Propino","Butino", "Pentino", "Hexino","Heptino", "Octino", "Nonino","Decino"};
 	public Sprite[] preguntas;
-	public string[] respuestaIncorrectas1 = new string[35] {"Hi", "H", "L","B", "Be", "Ca","Ni", "Ox", "Fl","N", "S", "Ma","A", "S", "F","A", "C", "Arg","Po", "Cal", "Es","T", "Va", "C","Man", "Hi", "C","N", "C", "Zi","G", "G", "Ar","S", "Bro"};
-	public string[] respuestaIncorrectas2 = new string[35] {"Hid", "Hel", "Lit","Ber", "Bor", "Car","Nit", "Oxi", "Flu","Neo", "Sod", "Mag","Alu", "Sil", "Fos","Asu", "Clo", "A","Pot", "C", "Esc","Tit", "Van", "Cro","Ma", "Hie", "Cob","Niq", "Cob", "Zin","Gal", "Ger", "Ars","Sel", "B"};
-	public string[] respuestaIncorrectas3 = new string[35] {"Hd", "Hl", "Lt","Br", "Br", "Cr","Nt", "Oi", "Fu","No", "Sd", "Mgn","Au", "Sl", "Ps","Au", "Co", "Ag","Ka", "Cl", "Sca","Tt", "Vn", "Co","Mg", "He", "Cb","Nq", "Cb", "Cn","Gl", "Gr", "A","Sl", "Bo"};
+	public string[] respuestaIncorrectas3 = new string[28] {"Butano", "Pentano", "Hexano","Heptano", "Octano", "Nonano","Decano", "Eteno", "Propeno","Buteno", "Penteno", "Hexeno","Hepteno", "Octeno", "Noneno","Deceno", "Etino", "Propino","Butino", "Pentino", "Hexino","Heptino", "Octino", "Nonino","Decino", "Metano", "Etano","Propano"};
+	public string[] respuestaIncorrectas2 = new string[28] {"Propano","Butano", "Pentano", "Hexano","Heptano", "Octano", "Nonano","Decano", "Eteno", "Propeno","Buteno", "Penteno", "Hexeno","Hepteno", "Octeno", "Noneno","Deceno", "Etino", "Propino","Butino", "Pentino", "Hexino","Heptino", "Octino", "Nonino","Decino", "Metano", "Etano"};
+	public string[] respuestaIncorrectas1 = new string[28] {"Eteno", "Propeno","Buteno", "Penteno", "Hexeno","Hepteno", "Octeno", "Noneno","Deceno", "Etano", "Propano","Butano", "Pentano", "Hexano","Heptano", "Octano", "Nonano","Decano", "Etino", "Propino","Butino", "Pentino", "Hexino","Heptino", "Octino", "Nonino","Decino", "Metano"};
+
 
 	void Start () {
 		
@@ -47,7 +48,7 @@ public class Level2Manager : MonoBehaviour {
 
 	public void Repartir(){
 		randomNum = Random.Range (0, 4);
-		randomNumPregunta = Random.Range (0, 35);
+		randomNumPregunta = Random.Range (0, 28);
 		preguntaImage.pregunta.sprite = preguntas [randomNumPregunta];
 
 
