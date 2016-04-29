@@ -11,6 +11,7 @@ public class mainMenuManager : MonoBehaviour {
 	string easyScene;
 	string FirstSceneNum1;
 	string FirstSceneNum2;
+	string FirstSceneNum3;
 	string Menu;
 	string Nivel1;
 	string Nivel2;
@@ -30,6 +31,7 @@ public class mainMenuManager : MonoBehaviour {
 		Nivel3 = "Nivel3";
 		FirstSceneNum1 = "FirstSceneNum1";
 		FirstSceneNum2 = "FirstSceneNum2";
+		FirstSceneNum3 = "FirstSceneNum3";
 		if (PlayerPrefs.GetInt ("Level") < 1) {
 			PlayerPrefs.SetInt ("Level", 1);
 			PlayerPrefs.Save ();
@@ -58,6 +60,12 @@ public class mainMenuManager : MonoBehaviour {
 	public void IntroCutscene2(){
 		if (counter >= maxcounter) {
 			SceneManager.LoadScene (FirstSceneNum2);
+		}
+	}
+
+	public void IntroCutscene3(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene (FirstSceneNum3);
 		}
 	}
 
