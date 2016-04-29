@@ -53,6 +53,7 @@
      <Compile Include="Assets\Scripts\LevelNumManager.cs" />
      <Compile Include="Assets\Scripts\LockLvl2Manager.cs" />
      <Compile Include="Assets\Scripts\LockLvl3Manager.cs" />
+     <Compile Include="Assets\Scripts\VideoController.cs" />
      <Compile Include="Assets\Scripts\framerateCheck.cs" />
      <Compile Include="Assets\Scripts\labelManager.cs" />
      <Compile Include="Assets\Scripts\labelManager2.cs" />

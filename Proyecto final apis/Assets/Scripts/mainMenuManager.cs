@@ -18,7 +18,7 @@ public class mainMenuManager : MonoBehaviour {
 	string Nivel3;
 	int level = 0;
 	int counter = 0;
-	int maxcounter = 60;
+	public int maxcounter = 60;
 
 
 	// Use this for initialization
@@ -78,7 +78,7 @@ public class mainMenuManager : MonoBehaviour {
 	public void Nivel2Menu(){
 		if (PlayerPrefs.GetInt ("Lvl2") >= 1) {
 			if (counter >= maxcounter) {
-				SceneManager.LoadScene (Nivel1);
+				SceneManager.LoadScene (Nivel2);
 			}
 		}
 	}
@@ -96,5 +96,26 @@ public class mainMenuManager : MonoBehaviour {
 			SceneManager.LoadScene (Nivel1);
 		}
 	}
+
+
+	public void Nivel1Victory(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene ("Nivel1Victory2");
+		}
+	}
+
+	public void Nivel1Victory2(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene ("Nivel1Victory3");
+		}
+	}
+
+	public void Nivel1Victory3(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene ("Nivel1Victory4");
+		}
+	}
+
+
 
 }

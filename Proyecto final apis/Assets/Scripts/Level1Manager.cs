@@ -40,7 +40,7 @@ public class Level1Manager : MonoBehaviour {
 		}
 
 		if (enemyHealth == 0) {
-			SceneManager.LoadScene ("EasyGame");
+			SceneManager.LoadScene ("Nivel1Victory");
 			PlayerPrefs.SetInt ("Lvl2", 1);
 		}
 	}
