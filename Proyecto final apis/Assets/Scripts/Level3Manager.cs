@@ -73,7 +73,6 @@ public class Level3Manager : MonoBehaviour {
 			labels[randomNum].myText.text = respuestasCorrectas[randomNumPregunta];
 			preguntaImage.pregunta.sprite = null;
 
-			int contador = 0;
 			for (int i = 0, iRandom = Random.Range(0,4) ; i < 4; i++, iRandom++) {
 				if (iRandom % 4 != randomNum) {
 					switch (i) {
@@ -106,7 +105,6 @@ public class Level3Manager : MonoBehaviour {
 			labels[randomNum].myID = randomNumPregunta;
 			labels[randomNum].myText.text = respuestasCorrectas2[randomNumPregunta];
 
-			int contador = 0;
 			for (int i = 0, iRandom = Random.Range(0,4) ; i < 4; i++, iRandom++) {
 				if (iRandom % 4 != randomNum) {
 					switch (i) {

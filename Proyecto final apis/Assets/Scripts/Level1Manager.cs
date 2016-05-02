@@ -60,7 +60,6 @@ public class Level1Manager : MonoBehaviour {
 		labels[randomNum].myID = randomNumPregunta;
 		labels[randomNum].myText.text = respuestasCorrectas[randomNumPregunta];
 
-		int contador = 0;
 		for (int i = 0, iRandom = Random.Range(0,4) ; i < 4; i++, iRandom++) {
 			if (iRandom % 4 != randomNum) {
 				switch (i) {

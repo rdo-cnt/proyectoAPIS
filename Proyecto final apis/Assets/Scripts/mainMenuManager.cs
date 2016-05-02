@@ -16,7 +16,6 @@ public class mainMenuManager : MonoBehaviour {
 	string Nivel1;
 	string Nivel2;
 	string Nivel3;
-	int level = 0;
 	int counter = 0;
 	public int maxcounter = 60;
 
