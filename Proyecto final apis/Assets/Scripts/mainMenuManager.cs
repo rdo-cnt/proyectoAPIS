@@ -51,6 +51,16 @@ public class mainMenuManager : MonoBehaviour {
 		}
 	}
 
+	public void Easy2(){
+			SceneManager.LoadScene (easyScene);
+	}
+
+	public void IntroCutsceneFirst(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene ("FirstSceneHalt");
+		}
+	}
+
 	public void IntroCutscene1(){
 		if (counter >= maxcounter) {
 			SceneManager.LoadScene (FirstSceneNum1);
@@ -66,6 +76,7 @@ public class mainMenuManager : MonoBehaviour {
 	public void IntroCutscene3(){
 		if (counter >= maxcounter) {
 			SceneManager.LoadScene (FirstSceneNum3);
+			PlayerPrefs.SetInt ("First", 1);
 		}
 	}
 
@@ -116,6 +127,41 @@ public class mainMenuManager : MonoBehaviour {
 		}
 	}
 
+	public void Nivel2Victory(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene ("Nivel2Victory2");
+		}
+	}
+
+	public void Nivel2Victory2(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene ("Nivel2Victory3");
+		}
+	}
+
+	public void Nivel2Victory3(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene ("Nivel2Victory4");
+		}
+	}
+
+	public void Nivel3Victory(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene ("Nivel3Victory2");
+		}
+	}
+
+	public void Nivel3Victory2(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene ("Nivel3Victory3");
+		}
+	}
+
+	public void Nivel3Victory3(){
+		if (counter >= maxcounter) {
+			SceneManager.LoadScene ("Nivel3Victory4");
+		}
+	}
 
 
 }

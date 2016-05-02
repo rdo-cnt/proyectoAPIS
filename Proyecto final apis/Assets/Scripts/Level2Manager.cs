@@ -10,6 +10,7 @@ public class Level2Manager : MonoBehaviour {
 
 	public pregunta2Manager preguntaImage;
 	public HealthManager HP;
+	public EnemyHealthManager enemyHP;
 
 	int conta = 0;
 	public int randomNum;
@@ -34,14 +35,15 @@ public class Level2Manager : MonoBehaviour {
 		}	
 
 		HP.HP.text = playerHealth.ToString();
+		enemyHP.HP.text = enemyHealth.ToString();
 
 		//primero checar vida
 		if (playerHealth == 0) {
-			SceneManager.LoadScene ("EasyGame");
+			SceneManager.LoadScene ("GameOver");
 		}
 
 		if (enemyHealth == 0) {
-			SceneManager.LoadScene ("EasyGame");
+			SceneManager.LoadScene ("Nivel2Victory");
 			PlayerPrefs.SetInt ("Lvl3", 1);
 		}
 	}

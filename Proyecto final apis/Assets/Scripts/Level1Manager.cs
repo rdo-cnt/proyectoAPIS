@@ -10,24 +10,19 @@ public class Level1Manager : MonoBehaviour {
 
 	public pregunta1Manager preguntaText;
 	public HealthManager HP;
+	public EnemyHealthManager enemyHP;
 
 	int conta = 0;
 	public int randomNum;
 	public int randomNumQuestions;
 	public int randomNumPregunta;
 	public string[] respuestasCorrectas = new string[35] {"H", "He", "Li","Be", "B", "C","N", "O", "F","Ne", "Na", "Mg","Al", "Si", "P","S", "Cl", "Ar","K", "Ca", "Sc","Ti", "V", "Cr","Mn", "Fe", "Co","Ni", "Cu", "Zn","Ga", "Ge", "As","Se", "Br"};
-	public string[] respuestasCorrectas2 = new string[28] {"Metano", "Etano", "Propano","Butano", "Pentano", "Hexano","Heptano", "Octano", "Nonano","Decano", "Eteno", "Propeno","Buteno", "Penteno", "Hexeno","Hepteno", "Octeno", "Noneno","Deceno", "Etino", "Propino","Butino", "Pentino", "Hexino","Heptino", "Octino", "Nonino","Decino"};
 
-
-	public string[] preguntas = new string[35] {"Hidrogeno", "Helio", "Litio","Berilio", "Boro", "Carbono","Nitrogeno", "Oxigeno", "Fluor","Neon", "Sodio", "Magnesio","Aluminio", "Silicio", "Fosforo","Azufre", "Cloro", "Argon","Potasio", "Calcio", "Escandio","Titanio", "Vanadio", "Cromo","Manganeso", "Hierro", "Cobalto","Niquel", "Cobre", "Cinc","Galio", "Germanio", "Arsenico","Selenio", "Bromo"};
-	public Sprite[] preguntasSprites;
+	public string[] preguntas = new string[35] {"Hidrogeno", "Helio", "Litio","Berilio", "Boro", "Carbono","Nitrogeno", "Oxigeno", "Fluor","Neon", "Sodio", "Magnesio","Aluminio", "Silicio", "Fosforo","Azufre", "Cloro", "Argon","Potasio", "Calcio", "Escandio","Titanio", "Vanadio", "Cromo","Manganeso", "Hierro", "Cobalto","Niquel", "Cobre", "Zinc","Galio", "Germanio", "Arsenico","Selenio", "Bromo"};
 
 	public string[] respuestaIncorrectas1 = new string[35] {"Hi", "H", "L","B", "Be", "Ca","Ni", "Ox", "Fl","N", "S", "Ma","A", "S", "F","A", "C", "Arg","Po", "Cal", "Es","T", "Va", "C","Man", "Hi", "C","N", "C", "Zi","G", "G", "Ar","S", "Bro"};
 	public string[] respuestaIncorrectas2 = new string[35] {"Hid", "Hel", "Lit","Ber", "Bor", "Car","Nit", "Oxi", "Flu","Neo", "Sod", "Mag","Alu", "Sil", "Fos","Asu", "Clo", "A","Pot", "C", "Esc","Tit", "Van", "Cro","Ma", "Hie", "Cob","Niq", "Cob", "Zin","Gal", "Ger", "Ars","Sel", "B"};
 	public string[] respuestaIncorrectas3 = new string[35] {"Hd", "Hl", "Lt","Br", "Br", "Cr","Nt", "Oi", "Fu","No", "Sd", "Mgn","Au", "Sl", "Ps","Au", "Co", "Ag","Ka", "Cl", "Sca","Tt", "Vn", "Co","Mg", "He", "Cb","Nq", "Cb", "Cn","Gl", "Gr", "A","Sl", "Bo"};
-	public string[] respuestaIncorrectas32 = new string[28] {"Butano", "Pentano", "Hexano","Heptano", "Octano", "Nonano","Decano", "Eteno", "Propeno","Buteno", "Penteno", "Hexeno","Hepteno", "Octeno", "Noneno","Deceno", "Etino", "Propino","Butino", "Pentino", "Hexino","Heptino", "Octino", "Nonino","Decino", "Metano", "Etano","Propano"};
-	public string[] respuestaIncorrectas22 = new string[28] {"Propano","Butano", "Pentano", "Hexano","Heptano", "Octano", "Nonano","Decano", "Eteno", "Propeno","Buteno", "Penteno", "Hexeno","Hepteno", "Octeno", "Noneno","Deceno", "Etino", "Propino","Butino", "Pentino", "Hexino","Heptino", "Octino", "Nonino","Decino", "Metano", "Etano"};
-	public string[] respuestaIncorrectas12 = new string[28] {"Eteno", "Propeno","Buteno", "Penteno", "Hexeno","Hepteno", "Octeno", "Noneno","Deceno", "Etano", "Propano","Butano", "Pentano", "Hexano","Heptano", "Octano", "Nonano","Decano", "Etino", "Propino","Butino", "Pentino", "Hexino","Heptino", "Octino", "Nonino","Decino", "Metano"};
 
 	void Start () {
 		
@@ -42,10 +37,11 @@ public class Level1Manager : MonoBehaviour {
 		}	
 
 		HP.HP.text = playerHealth.ToString();
+		enemyHP.HP.text = enemyHealth.ToString();
 
 		//primero checar vida
 		if (playerHealth == 0) {
-			SceneManager.LoadScene ("EasyGame");
+			SceneManager.LoadScene ("GameOver");
 		}
 
 		if (enemyHealth == 0) {
