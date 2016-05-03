@@ -26,7 +26,7 @@ public class Level2Manager : MonoBehaviour {
 
 
 	void Start () {
-		
+		enemyHealth =  (int)(enemyHealth * 1.0f * PlayerPrefs.GetFloat ("Multi"));
 
 	}
 
@@ -91,8 +91,8 @@ public class Level2Manager : MonoBehaviour {
 			wrongSound.Stop();
 		} else {
 			playerHealth--;
-			wrongSound.Play ();
 			wrongSound.Stop();
+			wrongSound.Play ();
 		}
 	}
 

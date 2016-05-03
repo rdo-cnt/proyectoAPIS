@@ -28,7 +28,8 @@ public class Level1Manager : MonoBehaviour {
 	public string[] respuestaIncorrectas3 = new string[35] {"Hd", "Hl", "Lt","Br", "Br", "Cr","Nt", "Oi", "Fu","No", "Sd", "Mgn","Au", "Sl", "Ps","Au", "Co", "Ag","Ka", "Cl", "Sca","Tt", "Vn", "Co","Mg", "He", "Cb","Nq", "Cb", "Cn","Gl", "Gr", "A","Sl", "Bo"};
 
 	void Start () {
-		
+		enemyHealth =  (int)(enemyHealth * 1.0f * PlayerPrefs.GetFloat ("Multi"));
+
 
 	}
 

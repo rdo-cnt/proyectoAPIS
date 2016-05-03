@@ -18,6 +18,7 @@ public class mainMenuManager : MonoBehaviour {
 	string Nivel3;
 	int counter = 0;
 	public int maxcounter = 60;
+	//public DificultyLevel dif;
 
 
 	public AudioSource confirmationSound;

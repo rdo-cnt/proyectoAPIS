@@ -39,7 +39,7 @@ public class Level3Manager : MonoBehaviour {
 
 
 	void Start () {
-		
+		enemyHealth =  (int)(enemyHealth * 1.0f * PlayerPrefs.GetFloat ("Multi"));
 	}
 
 	// Update is called once per frame
