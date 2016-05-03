@@ -21,6 +21,9 @@ public class Level2Manager : MonoBehaviour {
 	public string[] respuestaIncorrectas2 = new string[28] {"Propano","Butano", "Pentano", "Hexano","Heptano", "Octano", "Nonano","Decano", "Eteno", "Propeno","Buteno", "Penteno", "Hexeno","Hepteno", "Octeno", "Noneno","Deceno", "Etino", "Propino","Butino", "Pentino", "Hexino","Heptino", "Octino", "Nonino","Decino", "Metano", "Etano"};
 	public string[] respuestaIncorrectas1 = new string[28] {"Eteno", "Propeno","Buteno", "Penteno", "Hexeno","Hepteno", "Octeno", "Noneno","Deceno", "Etano", "Propano","Butano", "Pentano", "Hexano","Heptano", "Octano", "Nonano","Decano", "Etino", "Propino","Butino", "Pentino", "Hexino","Heptino", "Octino", "Nonino","Decino", "Metano"};
 
+	public AudioSource wrongSound;
+	public AudioSource rightSound;
+
 
 	void Start () {
 		
@@ -84,8 +87,12 @@ public class Level2Manager : MonoBehaviour {
 		if (randomNumPregunta == id) {
 			enemyHealth--;
 			Repartir ();
+			rightSound.Play ();
+			wrongSound.Stop();
 		} else {
 			playerHealth--;
+			wrongSound.Play ();
+			wrongSound.Stop();
 		}
 	}
 

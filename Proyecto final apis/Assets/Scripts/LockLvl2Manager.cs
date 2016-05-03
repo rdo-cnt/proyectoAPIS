@@ -7,6 +7,7 @@ public class LockLvl2Manager : MonoBehaviour {
 	public Transform MessagePoint;
 	public GameObject TheLock;
 	public int counterLock;
+	public AudioSource denySound;
 
 	// Use this for initialization
 	void Start () {
@@ -25,6 +26,7 @@ public class LockLvl2Manager : MonoBehaviour {
 	void OnMouseDown(){
 		if (PlayerPrefs.GetInt ("Lvl2") < 1) {
 			if (counterLock <= 0) {
+				denySound.Play ();
 				Instantiate (Message, MessagePoint.position, MessagePoint.rotation);
 				counterLock = 90;
 				//PlayerPrefs.SetInt ("Lvl2", 1);

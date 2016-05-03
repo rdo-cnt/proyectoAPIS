@@ -20,6 +20,9 @@ public class mainMenuManager : MonoBehaviour {
 	public int maxcounter = 60;
 
 
+	public AudioSource confirmationSound;
+
+
 	// Use this for initialization
 	void Start () {
 		counter = 0;
@@ -39,6 +42,7 @@ public class mainMenuManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+		
 		if (maxcounter > counter) {
 			counter++;
 		}
@@ -82,6 +86,7 @@ public class mainMenuManager : MonoBehaviour {
 	public void IntroMenu(){
 		if (counter >= maxcounter) {
 			SceneManager.LoadScene (Menu);
+			confirmationSound.Play ();
 		}
 	}
 
@@ -89,6 +94,7 @@ public class mainMenuManager : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("Lvl2") >= 1) {
 			if (counter >= maxcounter) {
 				SceneManager.LoadScene (Nivel2);
+				confirmationSound.Play ();
 			}
 		}
 	}
@@ -97,6 +103,7 @@ public class mainMenuManager : MonoBehaviour {
 		if (PlayerPrefs.GetInt ("Lvl3") >= 1) {
 			if (counter >= maxcounter) {
 				SceneManager.LoadScene (Nivel3);
+				confirmationSound.Play ();
 			}
 		}
 	}
@@ -104,6 +111,7 @@ public class mainMenuManager : MonoBehaviour {
 	public void Nivel1Menu(){
 		if (counter >= maxcounter) {
 			SceneManager.LoadScene (Nivel1);
+			confirmationSound.Play ();
 		}
 	}
 

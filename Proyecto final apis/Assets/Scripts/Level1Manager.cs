@@ -12,6 +12,9 @@ public class Level1Manager : MonoBehaviour {
 	public HealthManager HP;
 	public EnemyHealthManager enemyHP;
 
+	public AudioSource wrongSound;
+	public AudioSource rightSound;
+
 	int conta = 0;
 	public int randomNum;
 	public int randomNumQuestions;
@@ -87,8 +90,12 @@ public class Level1Manager : MonoBehaviour {
 		if (randomNumPregunta == id) {
 			enemyHealth--;
 			Repartir ();
+			rightSound.Play ();
+			wrongSound.Stop();
 		} else {
 			playerHealth--;
+			wrongSound.Stop();
+			wrongSound.Play ();
 		}
 	}
 

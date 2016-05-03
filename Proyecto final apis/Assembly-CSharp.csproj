@@ -54,6 +54,8 @@
      <Compile Include="Assets\Scripts\LevelNumManager.cs" />
      <Compile Include="Assets\Scripts\LockLvl2Manager.cs" />
      <Compile Include="Assets\Scripts\LockLvl3Manager.cs" />
+     <Compile Include="Assets\Scripts\MusicManager.cs" />
+     <Compile Include="Assets\Scripts\MusicManager2.cs" />
      <Compile Include="Assets\Scripts\VideoController.cs" />
      <Compile Include="Assets\Scripts\framerateCheck.cs" />
      <Compile Include="Assets\Scripts\labelManager.cs" />
