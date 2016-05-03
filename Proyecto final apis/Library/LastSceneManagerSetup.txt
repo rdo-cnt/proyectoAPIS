@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Nivel1Victory.unity
+- path: Assets/Scenes/FirstSceneNum3.unity
   isLoaded: 1
   isActive: 1

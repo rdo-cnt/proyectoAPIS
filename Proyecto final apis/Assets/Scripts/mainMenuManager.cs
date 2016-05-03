@@ -55,6 +55,12 @@ public class mainMenuManager : MonoBehaviour {
 		}
 	}
 
+	public void Relock(){
+		PlayerPrefs.SetInt ("Lvl2", 0);
+		PlayerPrefs.SetInt ("Lvl3", 0);
+		PlayerPrefs.Save ();
+	}
+
 	public void Easy2(){
 			SceneManager.LoadScene (easyScene);
 	}
